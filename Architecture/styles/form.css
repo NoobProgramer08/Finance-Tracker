@@ -1,0 +1,79 @@
+body {
+  background: url("../assets/backrgrounds/back.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.wrapper {
+  font-family: Itim;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  background-color: white;
+  border: 1px solid black;
+  margin-top: 60px;
+  min-width: 100px;
+  max-width: 800px;
+  height: 500px;
+}
+.picture-holder {
+  background: transparent;
+  min-width: 400px;
+  margin-right: 0;
+}
+.form-holder {
+  padding: 60px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.form-holder h1 {
+  text-decoration: underline;
+}
+.picture-holder img {
+  height: 300px;
+}
+.input-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3px;
+}
+.input-box input {
+  border: 2px solid black;
+}
+.input-box input::placeholder {
+  font-weight: bold;
+}
+.btn-register {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-left: 30px;
+}
+.logo img {
+  height: 20px;
+}
+.links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.links a {
+  text-decoration: none;
+  color: black;
+}
+.links a:hover {
+  text-decoration: underline;
+}
+.btn-register button {
+  width: 70%;
+  border-radius: 15px;
+}
