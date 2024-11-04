@@ -76,6 +76,9 @@ body {
   text-align: left;
   font-size: 1.25rem;
 }
+.statement-holder a {
+  text-decoration: none;
+}
 .statement-holder button {
   border-radius: 15px;
   border: 2px solid black;

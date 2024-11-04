@@ -34,6 +34,13 @@ body {
   color: black;
   font-weight: bold;
 }
+.form-holder a {
+  text-decoration: none;
+  color: black;
+}
+.form-holder a:hover {
+  text-decoration: underline;
+}
 .form-holder h3 {
   color: black;
 }
