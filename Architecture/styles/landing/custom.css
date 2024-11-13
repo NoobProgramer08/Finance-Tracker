@@ -1,0 +1,52 @@
+body {
+  background-color: rgb(244, 240, 232);
+}
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.links {
+  margin-top: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: Itim;
+}
+.links .logo {
+  margin-left: 2rem;
+  gap: 1rem;
+}
+.links img {
+  height: 3rem;
+}
+.logo {
+  display: flex;
+}
+.links ul li a:hover {
+  background-color: black;
+  color: white;
+}
+.links ul {
+  list-style-type: none;
+  display: flex;
+  gap: 2rem;
+  margin-right: 4rem;
+  font-size: 1.1rem;
+}
+.links a {
+  text-decoration: none;
+  color: black;
+  padding: 0.5rem;
+  border-radius: 15px;
+}
+.main-content {
+  font-family: Sour Gummy;
+  margin: 0;
+  min-width: 5rem;
+  max-width: 31.25rem;
+  margin-top: 5rem;
+
+  align-self: center;
+}
+.highlight-main {
+}
