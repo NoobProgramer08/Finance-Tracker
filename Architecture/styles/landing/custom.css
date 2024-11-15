@@ -1,52 +1,48 @@
 body {
-  background-color: rgb(244, 240, 232);
+  background: rgb(244, 240, 232);
+  font-family: Nunito Sans;
 }
-.wrapper {
-  display: flex;
-  flex-direction: column;
+.container a {
+  font-weight: bold;
+  font-family: JetBrains Mono;
 }
 .links {
-  margin-top: 0.5rem;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  font-family: Itim;
-}
-.links .logo {
-  margin-left: 2rem;
-  gap: 1rem;
-}
-.links img {
-  height: 3rem;
-}
-.logo {
-  display: flex;
-}
-.links ul li a:hover {
-  background-color: black;
-  color: white;
-}
-.links ul {
-  list-style-type: none;
-  display: flex;
-  gap: 2rem;
-  margin-right: 4rem;
-  font-size: 1.1rem;
+  justify-content: space-between;
 }
 .links a {
   text-decoration: none;
   color: black;
-  padding: 0.5rem;
-  border-radius: 15px;
+  font-size: 0.9rem;
+}
+.nav {
+  gap: 2rem;
+}
+
+#text-logo-holder {
+  font-size: 1.4rem;
+}
+#link {
+  opacity: 0.7;
+  font-weight: bold;
+}
+#link:hover {
+  opacity: 0.3;
+}
+.icons img {
+  height: 1rem;
+}
+.texts-button {
+  max-width: 31.25rem;
+  display: flex;
+  align-items: center;
 }
 .main-content {
-  font-family: Sour Gummy;
   margin: 0;
-  min-width: 5rem;
-  max-width: 31.25rem;
-  margin-top: 5rem;
-
-  align-self: center;
+  display: flex;
+  justify-content: space-between;
 }
-.highlight-main {
+.human-studying img {
+  height: 30rem;
 }
