@@ -1,10 +1,32 @@
-const nUser = document.querySelector("#newUser");
-const nPass = document.querySelector("#newPassword");
-const birthDate = document.querySelector("#bDay");
+const nUser = document.querySelector("#newUser").value;
+const nPass = document.querySelector("#newPassword").value;
+const birthDate = document.querySelector("#bDay").value;
+const gmail = document.querySelector("#email").value;
+const cpNum = document.querySelector("#phoneNum").value;
 const maleCheckbox = document.querySelector("#maleCheck");
 const femaleCheckbox = document.querySelector("#femaleCheck");
-const gmail = document.querySelector("#email");
-const cpNum = document.querySelector("#phoneNum");
 const rButton = document.querySelector("#register");
+var users = [];
 
-function registerUser() {}
+rButton.addEventListener("click", addUser);
+
+function addUser(e) {
+  e.preventDefault();
+  registerUser(users);
+}
+
+function registerUser(users) {
+  users.push({
+    username: nUser,
+    password: nPass,
+    birthDate: birthDate,
+    email: gmail,
+    celnumber: cpNum,
+  });
+
+  localStorage.setItem("accounts", users);
+}
+
+const parsed = JSON.parse(localStorage.getItem("accounts"));
+
+console.log("Parsed" + parsed);

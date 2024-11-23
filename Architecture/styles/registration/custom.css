@@ -1,8 +1,7 @@
 body {
-  background: url("../../styles/registration/assets/gradientBack.svg");
-  background-repeat: no-repeat;
-  background-size: cover;
+  background: rgb(244, 240, 232);
 }
+
 .wrapper h1 {
   font-family: JetBrains Mono;
 }

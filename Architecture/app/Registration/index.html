@@ -11,16 +11,13 @@
     <link rel="stylesheet" href="../../styles/registration/custom.css" />
   </head>
   <body>
-    <div
-      class="wrapper container d-flex flex-column justify-content-center align-items-center gap-2 rounded"
-    >
-     
-      <form class="form-control d-flex flex-column p-5 gap-4 mt-5">
+    <div class="wrapper container d-flex flex-column justify-content-center align-items-center gap-2 rounded ">
+      <form class="form-control d-flex flex-column p-5 gap-4 mt-5 border border-2 border-dark rounded bg-transparent ">
         <h3 class="h2 fw-bold text-dark text-center  ">Create Account</h3>
         <div class="container boxes">
           <label class="form-label">New Username</label
           ><input
-            class="form-control"
+            class="form-control border border-1 border-dark"
             type="username"
             required
             id="newUser"
@@ -31,7 +28,7 @@
           <label for="" class="form-label">New Password</label
           ><input
             type="password"
-            class="form-control"
+            class="form-control border border-1 border-dark"
             required
             id="newPassword"
             placeholder="ex.aezakmi@123"
@@ -41,7 +38,7 @@
           <div class="box d-flex flex-column">
             <label for="" class="form-label">Birthday</label>
             <input
-              class="form-control"
+              class="form-control border border-1 border-dark"
               type="text"
               placeholder="ex.MM/DD/YYYY"
               id="bDay"
@@ -62,7 +59,7 @@
             <label class="form-label">Email</label>
             <input
               type="email"
-              class="form-control"
+              class="form-control border border-1 border-dark"
               placeholder="ex.user@gmail.com"
               id="email"
             />
@@ -71,17 +68,17 @@
             <label class="form-label">Phone number</label>
             <input
               type="text"
-              class="form-control"
+              class="form-control border border-1 border-dark"
               placeholder="ex.09303082891"
               id="phoneNum"
             />
           </div>
         </div>
         <div class="btn">
-          <button class="btn btn-success fw-bold" id="register">Sign Up</button>
+          <button class="btn btn-success fw-light" id="register">Sign Up</button>
         </div>
       </form>
     </div>
-    <script src="script.js"></script>
+    <script src="../../Scripts/Registration/script.js"></script>
   </body>
 </html>

@@ -1,0 +1,43 @@
+body {
+  background: url("../../styles/landing/assets/background.svg");
+  font-family: JetBrains Mono;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.paragraph {
+  font-family: JetBrains Mono;
+  font-size: 1.4rem;
+}
+.item-1 {
+  max-width: 40rem;
+}
+
+.border {
+  background-color: pink;
+  border-radius: 15px;
+}
+.button-control button {
+  border-radius: 25px;
+  width: 13rem;
+  font-family: JetBrains Mono;
+}
+
+#sub-1 {
+  font-size: 0.9375rem;
+  background-color: rgb(230, 167, 104);
+}
+#sub-2 {
+  font-size: 0.9375rem;
+  background-color: ;
+}
+#sub-3 {
+  font-size: 0.9375rem;
+  background-color: skyblue;
+}
+#sub-4 {
+  font-size: 0.9375rem;
+  background-color: rgb(130, 130, 251);
+}
+.text-logos img {
+  height: 2.2rem;
+}
