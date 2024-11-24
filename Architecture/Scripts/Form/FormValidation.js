@@ -5,7 +5,7 @@ const register = document.querySelector("#register");
 const forgot = document.querySelector("#forgot");
 
 button.addEventListener("click", validateInput);
-register.addEventListener("click", transferRegisterWindow); 
+register.addEventListener("click", transferRegisterWindow);
 
 function validateInput() {
   let user = username.value;
@@ -29,3 +29,5 @@ function findUser(user, pass) {
   }
   return false;
 }
+
+console.log(window.location.pathname);

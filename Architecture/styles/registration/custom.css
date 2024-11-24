@@ -1,9 +1,10 @@
-body {
-  background: rgb(244, 240, 232);
-}
-
 .wrapper h1 {
   font-family: JetBrains Mono;
+}
+body {
+  background: url("../registration/assets/background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 .wrapper {
   max-width: 37.5rem;
@@ -11,4 +12,13 @@ body {
 }
 .wrapper label {
   font-weight: bold;
+}
+
+.btn button {
+  width: 100%;
+  font-family: Fira Code;
+}
+.btn p:hover {
+  text-decoration: underline;
+  color: blue;
 }

@@ -6,9 +6,11 @@ const cpNum = document.querySelector("#phoneNum").value;
 const maleCheckbox = document.querySelector("#maleCheck");
 const femaleCheckbox = document.querySelector("#femaleCheck");
 const rButton = document.querySelector("#register");
+const alreadyHave = document.querySelector("#haveAccount");
 var users = [];
 
 rButton.addEventListener("click", addUser);
+alreadyHave.addEventListener("click", toForm);
 
 function addUser(e) {
   e.preventDefault();
@@ -26,7 +28,10 @@ function registerUser(users) {
 
   localStorage.setItem("accounts", users);
 }
-
+function toForm() {
+  window.location.pathname =
+    "/Habit-Tracker-System/Architecture/app/Form/index.html";
+}
 const parsed = JSON.parse(localStorage.getItem("accounts"));
 
 console.log("Parsed" + parsed);
