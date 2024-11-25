@@ -32,6 +32,3 @@ function toForm() {
   window.location.pathname =
     "/Habit-Tracker-System/Architecture/app/Form/index.html";
 }
-const parsed = JSON.parse(localStorage.getItem("accounts"));
-
-console.log("Parsed" + parsed);
