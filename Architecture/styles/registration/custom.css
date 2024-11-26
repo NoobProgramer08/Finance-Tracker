@@ -1,24 +1,23 @@
-.wrapper h1 {
-  font-family: JetBrains Mono;
+.holder {
+  max-width: 25.25rem;
+  background: url("../../styles/registration/assets/form-bg-holder.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: Fira Code;
+  height: 30rem;
+  box-shadow: 10px 0px 138px 0px rgba(17, 15, 15, 0.75);
+  -webkit-box-shadow: 10px 0px 138px 0px rgba(17, 15, 15, 0.75);
+  -moz-box-shadow: 10px 0px 138px 0px rgba(17, 15, 15, 0.75);
 }
 body {
-  background: url("../registration/assets/background.jpg");
-  background-size: cover;
+  background: url("../../styles/registration/assets/background.svg");
   background-repeat: no-repeat;
+  background-size: cover;
 }
-.wrapper {
-  max-width: 37.5rem;
-  font-family: JetBrains Mono;
+.holder button {
+  width: 90%;
 }
-.wrapper label {
-  font-weight: bold;
-}
-
-.btn button {
-  width: 100%;
-  font-family: Fira Code;
-}
-.btn p:hover {
-  text-decoration: underline;
-  color: blue;
+.holder a {
+  text-decoration: none;
+  border-radius: 50px;
 }

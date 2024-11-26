@@ -11,78 +11,30 @@
     <link rel="stylesheet" href="../../styles/registration/custom.css" />
   </head>
   <body>
-    <div
-      class="wrapper container d-flex flex-column justify-content-center align-items-center gap-2 mb-5"
-    >
-      <!--*The form itself that has padding and black border-->
+    <div class="container mt-5">
       <form
-        class="form-control d-flex flex-column p-5 gap-4 mt-5 border border-2 border-secondary form"
+        action=""
+        class="container d-flex flex-column align-items-center gap-3 holder text-white justify-content-center rounded border"
       >
-        <h3 class="h2 text-dark text-center">Create Account</h3>
-        <div class="container boxes">
-          <label class="form-label">New Username</label
-          ><input
-            class="form-control border border-1 border-dark"
+        <h1 class="mb-4">Sign up</h1>
+        <div class="container">
+          <input
             type="username"
-            required
-            id="newUser"
-            placeholder="ex.windylmonton@gmail.com"
+            class="form-control p-3"
+            placeholder="New username"
           />
         </div>
-        <div class="container boxes">
-          <label for="" class="form-label">New Password</label
-          ><input
-            type="password"
-            class="form-control border border-1 border-dark"
-            required
-            id="newPassword"
-            placeholder="ex.aezakmi@123"
+        <div class="container">
+          <input
+            type="text"
+            class="form-control p-3"
+            placeholder="New password"
           />
         </div>
-        <div class="container d-flex gap-3">
-          <div class="box d-flex flex-column">
-            <label for="" class="form-label">Birthday</label>
-            <input
-              class="form-control border border-1 border-dark"
-              type="text"
-              placeholder="ex.MM/DD/YYYY"
-              id="bDay"
-            />
-          </div>
-          <div class="box d-flex flex-column">
-            <label class="form-label">Gender</label>
-            <div class="d-flex gap-3">
-              <input type="checkbox" id="maleCheck" value="Male" />
-              <label for="maleCheck">Male</label>
-              <input type="checkbox" id="femaleCheck" value="Female" />
-              <label for="femaleCheck">Female</label>
-            </div>
-          </div>
+        <div class="container mb-3">
+          <input type="email" class="form-control p-3" placeholder="Email" />
         </div>
-        <div class="email d-flex gap-3 justify-content-center">
-          <div class="box-1">
-            <label class="form-label">Email</label>
-            <input
-              type="email"
-              class="form-control border border-1 border-dark"
-              placeholder="ex.user@gmail.com"
-              id="email"
-            />
-          </div>
-          <div class="box-2">
-            <label class="form-label">Phone number</label>
-            <input
-              type="text"
-              class="form-control border border-1 border-dark"
-              placeholder="ex.09303082891"
-              id="phoneNum"
-            />
-          </div>
-        </div>
-        <div class="btn d-flex flex-column gap-3">
-          <button class="btn btn-primary" id="register">Sign Up</button>
-          <p id="haveAccount">Already have an account?</p>
-        </div>
+        <button class="btn btn-primary p-2">Sign up</button>
       </form>
     </div>
     <script src="../../Scripts/Registration/script.js"></script>

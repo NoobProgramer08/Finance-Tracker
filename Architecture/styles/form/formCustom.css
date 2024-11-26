@@ -1,0 +1,34 @@
+body {
+  background: url("../../styles/form/assets/background-form.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: Fira Code;
+}
+.form-holder {
+  max-width: 31.25rem;
+  height: 34.75rem;
+}
+.button {
+  background-color: white;
+  color: black;
+  font-weight: bold;
+  border-radius: 0.3rem;
+  padding: 1rem;
+  width: 80%;
+  border: none;
+}
+.twoButtons img {
+  height: 1.5rem;
+}
+.twoButtons div {
+  cursor: pointer;
+}
+.form {
+  background-color: rgba(30, 30, 30, 0.5);
+}
+.sign-up {
+  text-decoration: none;
+}
+.sign-up:hover {
+  text-decoration: underline;
+}
