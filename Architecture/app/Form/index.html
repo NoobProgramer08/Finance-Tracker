@@ -9,35 +9,49 @@
       href="../../Tools/BootStrap5/node_modules/styles.css"
     />
     <link rel="stylesheet" href="../../styles/form/formCustom.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Geist+Mono:wght@100..900&family=Itim&family=Mona+Sans:ital,wght@0,200..900;1,200..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Oswald:wght@200..700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Parkinsans:wght@300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik+Wet+Paint&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <div class="container-fluid mt-5">
       <form
         class="form-group container border border-1 border-secondary d-flex flex-column align-items-center form-holder gap-3 text-white justify-content-center form"
       >
-        <h2 class="">Login Here</h2>
+        <div class="d-flex flex-column align-items-center text-center">
+          <h2 class="text-dark">Login Here</h2>
+          <p class="text-dark">Log in here using your username and password</p>
+        </div>
         <div class="d-flex flex-column gap-4 container">
-          <div class="container">
-            <label for="" class="form-label">Username </label>
-            <input
-              type="username"
-              class="form-control text-left p-3"
-              required
-              placeholder="Username"
-            />
+          <div
+            class="container icons form-control p-3 d-flex gap-3 align-items-center"
+          >
+            <span
+              ><img src="../../styles/form/assets/user (2).png" alt=""
+            /></span>
+            <input type="username" required placeholder="Username" />
           </div>
-          <div class="container">
-            <label for="" class="form-label">Password</label>
-            <input
-              type="password"
-              class="form-control p-3"
-              placeholder="Password"
-            />
+          <div
+            class="container icons form-control p-3 d-flex gap-3 align-items-center"
+          >
+            <span
+              ><img src="../../styles/form/assets/padlock (2).png" alt=""
+            /></span>
+            <input type="password" placeholder="Password" />
           </div>
         </div>
         <button class="button mt-4">Log in</button>
-
-        <a href="" class="text-white sign-up mt-3">Sign up here</a>
+        <div
+          class="d-flex align-items-center justify-content-center gap-3 twobut mt-4"
+        >
+          <div class="text-center">Forgot Password</div>
+          <div class="sign d-flex justify-content-center align-items-center">
+            Sign up
+          </div>
+        </div>
       </form>
     </div>
   </body>

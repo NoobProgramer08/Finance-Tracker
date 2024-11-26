@@ -9,32 +9,54 @@
       href="../../Tools/BootStrap5/node_modules/styles.css"
     />
     <link rel="stylesheet" href="../../styles/registration/custom.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Geist+Mono:wght@100..900&family=Itim&family=Mona+Sans:ital,wght@0,200..900;1,200..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Oswald:wght@200..700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Parkinsans:wght@300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik+Wet+Paint&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <div class="container mt-5">
+    <div class="container overal d-flex justify-content-center">
       <form
         action=""
-        class="container d-flex flex-column align-items-center gap-3 holder text-white justify-content-center rounded border"
+        class="form-group container holder d-flex flex-column justify-content-center align-items-center gap-3 mt-5 bg-white p-5"
       >
-        <h1 class="mb-4">Sign up</h1>
-        <div class="container">
-          <input
-            type="username"
-            class="form-control p-3"
-            placeholder="New username"
-          />
+        <div
+          class="header-icons gap-3 d-flex flex-column container d-flexr align-items-center"
+        >
+          <h1>Create Account</h1>
+          <div class="icons container">
+            <img
+              src="../../styles/registration/assets//google (2).png"
+              alt=""
+            />
+            <img src="../../styles/registration/assets/facebook.png" alt="" />
+            <img
+              src="../../styles/registration/assets/twitter (1).png"
+              alt=""
+            />
+            <img
+              src="../../styles/registration/assets/vk-social-network-logo.png"
+              alt=""
+            />
+          </div>
+          <p class="text-center">or use your email for registration</p>
         </div>
-        <div class="container">
-          <input
-            type="text"
-            class="form-control p-3"
-            placeholder="New password"
-          />
+        <input type="text" class="form-control" placeholder="Name" />
+        <input type="email" class="form-control" placeholder="Email" />
+        <input type="password" class="form-control" placeholder="Password" />
+        <div>
+          <input type="checkbox" id="check" />
+          <label for="check" class="form-label"
+            >I agree to the <span class="imp">terms </span>and
+            <span class="imp">policy</span></label
+          >
         </div>
-        <div class="container mb-3">
-          <input type="email" class="form-control p-3" placeholder="Email" />
+        <div class="d-flex gap-3 twobuttons">
+          <button id="btn-1" class="text-white">Sign up</button
+          ><button id="btn-2">Sign in</button>
         </div>
-        <button class="btn btn-primary p-2">Sign up</button>
       </form>
     </div>
     <script src="../../Scripts/Registration/script.js"></script>
