@@ -1,0 +1,59 @@
+body {
+  background: url("../../styles/form/assets/form-back.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: Parkinsans;
+}
+.form-holder {
+  max-width: 28.25rem;
+  height: 34.75rem;
+  background: url("../../styles/form/assets/form-back.svg");
+  box-shadow: 0px 6px 55px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 0px 6px 55px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 6px 55px 0px rgba(0, 0, 0, 0.75);
+  border-radius: 10px;
+}
+.button {
+  background-color: white;
+  color: black;
+  font-family: Parkinsans;
+  border-radius: 0.3rem;
+  padding: 0.7rem;
+  width: 80%;
+  font-size: 1.3rem;
+  border: none;
+}
+.twoButtons img {
+  height: 1.5rem;
+}
+.twoButtons div {
+  cursor: pointer;
+}
+.form {
+  background-color: rgba(30, 30, 30, 0.5);
+}
+.sign-up {
+  text-decoration: none;
+}
+.sign-up:hover {
+  text-decoration: underline;
+}
+.sign {
+  background-color: rgb(255, 102, 128);
+  padding: 0.7rem;
+  width: 70%;
+  border-radius: 1rem;
+}
+
+.icons input {
+  border: none;
+  height: 100%;
+  width: 100%;
+}
+
+.icons img {
+  height: 1.5rem;
+}
+.twobut {
+  cursor: pointer;
+}
