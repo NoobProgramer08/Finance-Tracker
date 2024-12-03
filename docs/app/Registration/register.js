@@ -5,6 +5,11 @@ const agree = document.querySelector("#agree");
 const signUp = document.querySelector("#btn-1");
 const parentForCheck = document.querySelector("#check-alert");
 const overallAlert = document.querySelector("#alert-for-all");
+const inputs = document.querySelectorAll("input");
+
+
+const users = [];
+
 
 signUp.addEventListener("click", (e) => {
   e.preventDefault();
@@ -44,13 +49,13 @@ signUp.addEventListener("click", (e) => {
     parentForCheck.innerHTML = "Please read and agree to the terms and policy!";
     parentForCheck.appendChild(removeButton);
     
-
     removeButton.addEventListener("click", () => {
       removeElements(parentForCheck,removeButton);
     
     });
 
     $("#check-alert").alert();
+    return;
   }
   registerUser(newUser, e);
 
@@ -58,11 +63,27 @@ signUp.addEventListener("click", (e) => {
 
 function registerUser(newUser, e) {
   e.preventDefault();
+  users.push(newUser);
+  localStorage.setItem("Users",JSON.stringify(users));
+
+  clearInputs();
 
 }
 
-function removeElements(parentElement){
+function removeElements(parentElement,removeButton){
+  parentElement.value = "";
   parentElement.className = "";
   parentElement.innerHTML = "";
+  agree.checked = false;
 
 }
+function clearInputs(){
+  inputs.forEach(input => input.value = "");
+  agree.value = "";
+
+
+}
+
+
+
+
