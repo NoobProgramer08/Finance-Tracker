@@ -1,28 +1,30 @@
 const username = document.querySelector("#name");
-const email = document.querySelector("#email");
 const pass = document.querySelector("#password");
 const agree = document.querySelector("#agree");
 const signUp = document.querySelector("#btn-1");
 const parentForCheck = document.querySelector("#check-alert");
 const overallAlert = document.querySelector("#alert-for-all");
 const inputs = document.querySelectorAll("input");
-
+const gender = document.querySelectorAll(".gender");
+const button2 = document.querySelector("#btn-2");
 
 const users = [];
-
+button2.addEventListener("click",transferWindow);
 
 signUp.addEventListener("click", (e) => {
   e.preventDefault();
+
+  //bag ohon pani
   const newUser = [
     {
       name: username.value,
-      email: email.value,
       password: pass.value,
       agree: agree.checked,
     },
   ];
+  
 
-  if (username.value == "" || email.value == "" || password.value == "") {
+  if (username.value == "" ||  password.value == "") {
     const removeButton = document.createElement("button");
     
     removeButton.innerHTML = "Ok";
@@ -33,7 +35,8 @@ signUp.addEventListener("click", (e) => {
     overallAlert.appendChild(removeButton);
 
     removeButton.addEventListener("click", () => {
-      removeElements(overallAlert,removeButton);
+    removeElements(overallAlert,removeButton);
+
     });
     $("#alert-for-all").alert();
     return;
@@ -44,13 +47,13 @@ signUp.addEventListener("click", (e) => {
 
     removeButton.innerHTML = "Ok";
     removeButton.className = "btn btn-danger";
-    parentForCheck.className = "alert alert-danger d-flex gap-3 align-items-center justify-content-center p-3";
+    parentForCheck.className = "alert alert-danger d-flex gap-3 align-items-center justify-content-center p-3 text-center";
     parentForCheck.role = "alert";
     parentForCheck.innerHTML = "Please read and agree to the terms and policy!";
     parentForCheck.appendChild(removeButton);
     
     removeButton.addEventListener("click", () => {
-      removeElements(parentForCheck,removeButton);
+      removeElements(parentForCheck);
     
     });
 
@@ -61,6 +64,7 @@ signUp.addEventListener("click", (e) => {
 
 });
 
+
 function registerUser(newUser, e) {
   e.preventDefault();
   users.push(newUser);
@@ -70,7 +74,7 @@ function registerUser(newUser, e) {
 
 }
 
-function removeElements(parentElement,removeButton){
+function removeElements(parentElement ){
   parentElement.value = "";
   parentElement.className = "";
   parentElement.innerHTML = "";
@@ -80,6 +84,17 @@ function removeElements(parentElement,removeButton){
 function clearInputs(){
   inputs.forEach(input => input.value = "");
   agree.value = "";
+
+}
+
+
+
+
+
+function transferWindow(e){
+    e.preventDefault();
+    console.log("Transfer Window");
+    window.location = "/Habit-Tracker-System/docs/app/Form/index.html";
 
 
 }

@@ -62,3 +62,9 @@ body {
 #alert-for-all {
   width: 100%;
 }
+.male,
+.female {
+  height: 7rem;
+  width: 7rem;
+  border-radius: 1rem;
+}
