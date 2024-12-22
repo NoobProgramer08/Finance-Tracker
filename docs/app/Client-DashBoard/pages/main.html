@@ -39,10 +39,9 @@
         <div class="links-icons">
           <div class="links">
             <a href="/dashboard" onclick="route()">Dashboard</a>
-            <a href="">Tasks</a>
-            <a href="">Leaderboards</a>
-            <a href="">Progress</a>
-            <a href="">Log out</a>
+            <a href="/settask" onclick="route()">Tasks</a>
+            <a href="/leaderboard" onclick="route()">Leaderboards</a>
+            <a href="#" id="logOut">Log out</a>
           </div>
           <div class="icons">
             <img src="assets/profiles/boy.png" id="userprofile" />
@@ -51,21 +50,10 @@
       </nav>
       <hr id="horizontal" />
       <!--Main Content-->
-      <main class="insert">
-        <div class="tasktable">
-          <div class="adduser">
-            <span><img src="assets/table-style/plus.png" alt="" /></span>
-            <p>Add new user</p>
-          </div>
-          <table class="tableList">
-            <th>Username</th>
-            <th>Ranking</th>
-            <th>Status</th>
-          </table>
-        </div>
-      </main>
+      <main class="insert"></main>
       <!--End of main content-->
     </div>
     <script src="route.js"></script>
+    <script src="../behavior/custom.js"></script>
   </body>
 </html>

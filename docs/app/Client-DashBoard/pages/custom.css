@@ -32,10 +32,10 @@ body {
 .links a {
   text-decoration: none;
   color: white;
+  cursor: pointer;
 }
 .links a:hover {
   text-decoration: underline;
-  text-decoration-thickness: ;
 }
 .links {
   display: flex;
@@ -155,6 +155,7 @@ main {
   flex-direction: column;
   align-items: center;
   gap: 2rem;
+  margin-top: 1rem;
 }
 .adduser {
   display: flex;
@@ -172,3 +173,45 @@ main {
 .adduser img {
   height: 2rem;
 }
+.tableList th,
+td {
+  border: 1px solid white;
+  padding: 0.5rem;
+  width: 13.75rem;
+  color: black;
+}
+.tableList th {
+  background-color: #fefae0;
+}
+.tableList td {
+  background-color: #c0f8d1;
+  text-align: center;
+}
+/*Leaderboards Design*/
+.leaderBoard {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+  gap: 1rem;
+}
+.leaderBoard h1 {
+  color: white;
+}
+.leaderBoardTable th,
+td {
+  border: 1px solid white;
+  padding: 1rem;
+  width: 15.75rem;
+}
+.leaderBoardTable th {
+  background: #9cfffa;
+  font-family: Fira Code;
+}
+.leaderBoardTable td {
+  text-align: center;
+  background: #fffaff;
+  font-family: Kanit;
+}
+/*End of leaderboards Design*/
