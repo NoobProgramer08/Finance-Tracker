@@ -15,7 +15,7 @@
       <form class="form">
         <p class="form-title">Sign in to your account</p>
         <div class="input-container">
-          <input placeholder="Enter email" type="email" />
+          <input placeholder="Enter email" type="email" id="email" />
           <span>
             <svg
               stroke="currentColor"
@@ -33,7 +33,7 @@
           </span>
         </div>
         <div class="input-container">
-          <input placeholder="Enter password" type="password" />
+          <input placeholder="Enter password" type="password" id="password" />
           <span>
             <svg
               stroke="currentColor"
@@ -56,13 +56,15 @@
             </svg>
           </span>
         </div>
-        <button class="submit" type="submit">Sign in</button>
+        <button class="submit" type="submit" id="signin">Sign in</button>
         <p class="signup-link">
           No account?
           <a href="" id="signup">Sign up</a>
         </p>
       </form>
     </div>
+    <!-- SweetAlert2 CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="login.js"></script>
   </body>
 </html>

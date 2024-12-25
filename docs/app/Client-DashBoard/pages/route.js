@@ -22,6 +22,6 @@ const handleLocation = async() => {
 
 window.onpopstate = handleLocation;
 window.route = route;
-window.addEventListener('load',() => {
-    
-})
+
+handleLocation();
+
