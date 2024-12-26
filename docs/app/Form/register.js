@@ -6,7 +6,7 @@ const email = document.querySelector("#email");
 const password = document.querySelector("#password");
 const confirmPass = document.querySelector("#confirmpass");
 const allInputs = document.querySelectorAll(".input");
-let users = [];
+let users = []; 
 let newUser = {};
 
 signInBtn.addEventListener("click",transferToLogin);
