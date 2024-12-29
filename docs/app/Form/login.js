@@ -2,6 +2,8 @@ const signUpBtn = document.querySelector("#signup");
 const logInBtn = document.querySelector("#signin");
 const email = document.querySelector("#email");
 const password = document.querySelector("#password");
+const userImage = document.querySelector("#userprofile");
+let gender = "";
 
 signUpBtn.addEventListener("click",transferToRegister);
 logInBtn.addEventListener("click",validateAccount);
@@ -18,6 +20,8 @@ function validateAccount(e){
    
     const users = localStorage.getItem("User");
     const convert = JSON.parse(users);
+
+    console.log(convert);
     
     if(email.value == "" || password.value == ""){
         Swal.fire({
@@ -31,6 +35,7 @@ function validateAccount(e){
     convert.forEach(user =>{
      if(user.email == email.value && user.password ==  password.value){        
         found = true;
+        gender = user.gender;
 
         Swal.fire({
 
@@ -40,9 +45,7 @@ function validateAccount(e){
         confirmButton:'Okay',
         confirmButtonText:"Ok",
 
-         })
-         
-         
+         }).then(response => transferToClient(e)); 
        }
      });
 
@@ -52,8 +55,6 @@ function validateAccount(e){
             title: "Oops!!!",
             text: "Account not found",
           })
-
-
      }
          
       
@@ -63,7 +64,10 @@ function transferToClient(e){
     e.preventDefault();
     window.location = "/Habit-Tracker-System/docs/app/Client-DashBoard/pages/main.html";
 }
-
+function transferToAdmin(e){
+    e.preventDefault();
+    window.location = "/Habit-Tracker-System/docs/app/Admin-Dashboard/index.html";
+}
 
 
 

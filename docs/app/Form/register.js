@@ -5,14 +5,15 @@ const lastname = document.querySelector("#lastname");
 const email = document.querySelector("#email");
 const password = document.querySelector("#password");
 const confirmPass = document.querySelector("#confirmpass");
+const userGender = document.querySelector("#gender");
 const allInputs = document.querySelectorAll(".input");
 let users = []; 
 let newUser = {};
 
+
+//*Events
 signInBtn.addEventListener("click",transferToLogin);
 submitBtn.addEventListener("click",checkBlanks);
-
-
 
 function transferToLogin(e){
     e.preventDefault();
@@ -20,16 +21,16 @@ function transferToLogin(e){
 }
 
 function checkBlanks(e){
-    e.preventDefault();
-
+    e.preventDefault();    
     let back = false;
 
     allInputs.forEach(input => {
-        if(input.value == "" ){
-           back = true;
-         
-        }
-      
+    
+    if(input.value == "" ){
+        back = true;         
+
+    }
+
     });
 
     if(back){
@@ -37,9 +38,9 @@ function checkBlanks(e){
             icon: "error",
             title: "Oops...",
             text: "Please dont leave blank inputs",
-          });
-       return;
-
+            });
+            
+        return;
     }
     
     if(confirmPass.value != password.value){
@@ -47,7 +48,8 @@ function checkBlanks(e){
             icon: "error",
             title: "Oops...",
             text: "Password and Confirm Password is not the same",
-          });
+        });
+
         return;
 
     }
@@ -56,54 +58,52 @@ function checkBlanks(e){
 
 }
 
-  
 function registerUser(e){
     e.preventDefault();
 
-    let getUsers = localStorage.getItem("User");
-    let convertBack = JSON.parse(getUsers);
-    users = [];
 
-convertBack.forEach(user =>{
- users.push(user);
+    if(localStorage.getItem("User")  != null ){
+        let getUsers = localStorage.getItem("User");
+        let convertBack = JSON.parse(getUsers);
+        users = [];
+    
+        convertBack.forEach(user =>{
+        users.push(user);
+        }); 
+        
+    }
 
-    })
-     
-   newUser = {
+newUser = {
         firstname:firstname.value,
         lastname:lastname.value,
         email:email.value,
-        password:password.value
+        password:password.value,
+        gender:userGender.value,
     };
 
-
-
+    
     users.push(newUser);
     localStorage.setItem("User",JSON.stringify(users));
 
-    console.log("Registered")
-
     Swal.fire({
-        title: "Registation Successfull",
+        title: "Registration Successfull",
         width: 600,
         padding: "3em",
         color: "#716add",
         background: "#fff url(/images/trees.png)",
         backdrop:`
-          rgba(0,0,123,0.4)
-          url("/images/nyan-cat.gif")
-          left top
-          no-repeat
+            rgba(0,0,123,0.4)
+            url("/images/nyan-cat.gif")
+            left top
+            no-repeat
         `
-      });
-  
-  
-   emptyInputs();
+        });
+    
+    emptyInputs();
 }
 
 function emptyInputs(){
     allInputs.forEach(input => {
         input.value = "";
     })
-  
 }

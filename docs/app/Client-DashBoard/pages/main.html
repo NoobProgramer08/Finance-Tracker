@@ -38,13 +38,13 @@
         </div>
         <div class="links-icons">
           <div class="links">
-            <a href="/dashboard" onclick="route()">Dashboard</a>
-            <a href="/settask" onclick="route()">Tasks</a>
-            <a href="/leaderboard" onclick="route()">Leaderboards</a>
-            <a href="#" id="logOut">Log out</a>
+            <a href="/main" onclick="route(event)">Dashboard</a>
+            <a href="/settask" onclick="route(event)">Tasks</a>
+            <a href="/leaderboard" onclick="route(event)">Leaderboards</a>
+            <a href="">Log out</a>
           </div>
           <div class="icons">
-            <img src="assets/profiles/boy.png" id="userprofile" />
+            <img id="userprofile" />
           </div>
         </div>
       </nav>
@@ -54,6 +54,7 @@
       <!--End of main content-->
     </div>
     <script src="route.js"></script>
-    <script src="../behavior/custom.js"></script>
+    <script src="main.js"></script>
+    <script src="../../../../node_modules/sweetalert2/dist/sweetalert2.all.min.js"></script>
   </body>
 </html>
