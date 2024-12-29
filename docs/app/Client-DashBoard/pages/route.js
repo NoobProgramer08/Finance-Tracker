@@ -8,7 +8,7 @@ const route = (event) => {
     handleLocation();//Calls the handle location method
 }
 const routes = {
-    
+    "sss":"",
     "/main":"Habit-Tracker-System/docs/app/Client-DashBoard/pages/mainPage.html",
     "/settask":"Habit-Tracker-System/docs/app/Client-DashBoard/pages/tasks.html",
     "/leaderboard":"Habit-Tracker-System/docs/app/Client-DashBoard/pages/leaderboard.html",
@@ -18,10 +18,11 @@ const routes = {
 const handleLocation = async() => {
     const path = window.location.pathname;
     const route = routes[path] || routes[404];
-    console.log(route);
     const html = await fetch(route).then((data) => data.text());
     const location = document.querySelector(".insert");
     location.innerHTML = html;
+    console.log(route);
+
     
 }
 

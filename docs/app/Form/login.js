@@ -45,7 +45,12 @@ function validateAccount(e){
         confirmButton:'Okay',
         confirmButtonText:"Ok",
 
-         }).then(response => transferToClient(e)); 
+         }).then((response) => {
+            if(response.isConfirmed){
+                transferToClient(e);
+
+            }
+         }); 
        }
      });
 
@@ -53,10 +58,10 @@ function validateAccount(e){
         Swal.fire({
             icon: "error",
             title: "Oops!!!",
-            text: "Account not found",
+            text: "Account not found Please Register",
+            confirmButton:"Okay"
           })
-     }
-         
+     }   
       
 }
 
