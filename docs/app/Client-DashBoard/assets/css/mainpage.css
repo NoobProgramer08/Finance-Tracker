@@ -1,0 +1,71 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.links-product {
+  display: flex;
+  justify-content: space-between;
+
+  padding: 2rem;
+  color: white;
+  align-items: center;
+  background: #0d0a0b;
+}
+.links-product header {
+  font-family: Fira Code;
+}
+.links {
+  display: flex;
+  gap: 3rem;
+}
+.links a {
+  color: white;
+  text-decoration: none;
+  font-family: JetBrains Mono;
+}
+.user-profile img {
+  height: 4rem;
+}
+.user-profile {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+.search-bar input {
+  background: none;
+  border: none;
+  color: white;
+  width: 100%;
+  /*Removes the outline*/
+  outline: none;
+  font-family: JetBrains Mono;
+}
+.search-bar {
+  border: 1px solid white;
+  padding: 0.5rem;
+  width: 300px;
+  display: flex;
+  gap: 1rem;
+}
+.search-bar img {
+  height: 1.2rem;
+}
+#dropdown-trigger img {
+  height: 3rem;
+}
+
+#dropdown-trigger img:hover {
+  opacity: 0.3;
+}
+#dropdown-trigger {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+#dropdowns a {
+  text-decoration: none;
+  color: white;
+  font-family: JetBrains Mono;
+}
