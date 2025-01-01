@@ -12,6 +12,7 @@ const route = ((event) => {
 const routes = {
     "/metric":"Habit-Tracker-System/docs/app/Admin-Dashboard/assets/pages/metrics.html",
     "/users":"Habit-Tracker-System/docs/app/Admin-Dashboard/assets/pages/users.html",
+     404:""
 
 }
 const handleLocation =  async() => {
