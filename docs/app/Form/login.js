@@ -17,7 +17,7 @@ function transferToRegister(e){
 function validateAccount(e){
     e.preventDefault();
     let found = false;
-   
+
     const users = localStorage.getItem("User");
     const convert = JSON.parse(users);
 
@@ -28,12 +28,12 @@ function validateAccount(e){
             icon: "error",
             title: "Oops!!!",
             text: "Please dont leave any blank inputs",
-          })
-          return;
+        })
+        return;
 
-  }
+}
     convert.forEach(user =>{
-     if(user.email == email.value && user.password ==  password.value){        
+    if(user.email == email.value && user.password ==  password.value){        
         found = true;
         gender = user.gender;
 
@@ -45,24 +45,23 @@ function validateAccount(e){
         confirmButton:'Okay',
         confirmButtonText:"Ok",
 
-         }).then((response) => {
+        }).then((response) => {
             if(response.isConfirmed){
                 transferToClient(e);
 
             }
-         }); 
-       }
-     });
+        }); 
+    }
+    });
 
-     if(!found){
+    if(!found){
         Swal.fire({
             icon: "error",
             title: "Oops!!!",
             text: "Account not found Please Register",
             confirmButton:"Okay"
-          })
-     }   
-      
+        })
+    }    
 }
 
 function transferToClient(e){

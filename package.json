@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "chart.js": "^4.4.7",
     "datatables.net-dt": "^2.1.8",
     "sweetalert2": "^11.15.3"
   }
