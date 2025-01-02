@@ -23,6 +23,11 @@
   color: white;
   text-decoration: none;
   font-family: JetBrains Mono;
+  /* *Create gap to text and underline*/
+  text-underline-offset: 12px;
+}
+.links a:hover {
+  text-decoration: underline;
 }
 .user-profile img {
   height: 4rem;
@@ -37,7 +42,7 @@
   border: none;
   color: white;
   width: 100%;
-  /*Removes the outline*/
+  /* *Removes the outline*/
   outline: none;
   font-family: JetBrains Mono;
 }

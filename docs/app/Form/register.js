@@ -10,14 +10,13 @@ const allInputs = document.querySelectorAll(".input");
 let users = []; 
 let newUser = {};
 
-
 //*Events
 signInBtn.addEventListener("click",transferToLogin);
 submitBtn.addEventListener("click",checkBlanks);
 
 function transferToLogin(e){
     e.preventDefault();
-    window.location = "/Habit-Tracker-System/docs/app/Form/login.html";
+    window.location = "/Finance-Tracker/docs/app/Form/login.html";
 }
 
 function checkBlanks(e){
@@ -49,9 +48,7 @@ function checkBlanks(e){
             title: "Oops...",
             text: "Password and Confirm Password is not the same",
         });
-
         return;
-
     }
 
     registerUser(e);
@@ -60,25 +57,28 @@ function checkBlanks(e){
 
 function registerUser(e){
     e.preventDefault();
+    let userCount = 0;
 
 
     if(localStorage.getItem("User")  != null ){
         let getUsers = localStorage.getItem("User");
         let convertBack = JSON.parse(getUsers);
         users = [];
-    
         convertBack.forEach(user =>{
         users.push(user);
+        userCount++;
         }); 
         
     }
 
 newUser = {
+        id:userCount+1,
         firstname:firstname.value,
         lastname:lastname.value,
         email:email.value,
         password:password.value,
         gender:userGender.value,
+        status:"Inactive"
     };
 
     

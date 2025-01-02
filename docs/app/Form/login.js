@@ -3,14 +3,14 @@ const logInBtn = document.querySelector("#signin");
 const email = document.querySelector("#email");
 const password = document.querySelector("#password");
 const userImage = document.querySelector("#userprofile");
-let gender = "";
+
 
 signUpBtn.addEventListener("click",transferToRegister);
 logInBtn.addEventListener("click",validateAccount);
 
 function transferToRegister(e){
     e.preventDefault();
-    window.location = "/Habit-Tracker-System/docs/app/Form/registration.html";
+    window.location = "/Finance-Tracker/docs/app/Form/registration.html";
 
 }
 
@@ -21,22 +21,24 @@ function validateAccount(e){
     const users = localStorage.getItem("User");
     const convert = JSON.parse(users);
 
-    console.log(convert);
+    if(email.value === "ADMIN" && password.value === "pass"){
+        transferToAdmin(e);
+    
+    }
     
     if(email.value == "" || password.value == ""){
         Swal.fire({
             icon: "error",
             title: "Oops!!!",
-            text: "Please dont leave any blank inputs",
+        
         })
         return;
-
 }
     convert.forEach(user =>{
     if(user.email == email.value && user.password ==  password.value){        
         found = true;
         gender = user.gender;
-
+        
         Swal.fire({
 
         title:"You are logged in",
@@ -48,7 +50,7 @@ function validateAccount(e){
         }).then((response) => {
             if(response.isConfirmed){
                 transferToClient(e);
-
+            
             }
         }); 
     }
@@ -66,11 +68,11 @@ function validateAccount(e){
 
 function transferToClient(e){
     e.preventDefault();
-    window.location = "/Habit-Tracker-System/docs/app/Client-DashBoard/pages/main.html";
+    window.location = "/Finance-Tracker/docs/app/Client-DashBoard/main.html";
 }
 function transferToAdmin(e){
     e.preventDefault();
-    window.location = "/Habit-Tracker-System/docs/app/Admin-Dashboard/index.html";
+    window.location = "/Finance-Tracker/docs/app/Admin-Dashboard/main.html";
 }
 
 

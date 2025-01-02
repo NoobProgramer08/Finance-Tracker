@@ -1,6 +1,7 @@
 const dropdownButton  = document.querySelector("#dropdown-trigger");
 const dropDowns = document.querySelector("#dropdowns")
 
+
 dropdownButton.addEventListener("click",displayDropdown);
 
 
@@ -13,9 +14,10 @@ function displayDropdown(e){
     
     dropDowns.appendChild();
     
-
-
-
-
-
 }
+
+
+
+
+
+
