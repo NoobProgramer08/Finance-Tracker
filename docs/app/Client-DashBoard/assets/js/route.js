@@ -12,7 +12,7 @@ const route = (event) => {
 const routes = {
     "/home": "Finance-Tracker/docs/app/Client-DashBoard/assets/pages/home.html",
     "/transaction": "Finance-Tracker/docs/app/Client-DashBoard/assets/pages/transaction.html",
-    "/history":"Finance-Tracker/docs/app/Admin-Dashboard/assets/pages/history.html",
+    "/history":"Finance-Tracker/docs/app/Client-DashBoard/assets/pages/history.html",
 };
 
 const handleLocation = async () => {
