@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Client Dashboard</title>
+    <link rel="stylesheet" href="assets/css/mainpage.css" />
+
+    <link rel="stylesheet" href="assets/css/tableStyle.css" />
+    <link rel="stylesheet" href="assets/css/graph.css" />
+  </head>
+  <body>
+    <div class="links-product">
+      <header class="mainHeader"><h2>Trellio.</h2></header>
+      <nav class="links">
+        <a href="/home" onclick="route(event)">Home</a>
+        <a href="/history" onclick="route(event)">History</a>
+        <a href="/analytics" onclick="route(event)">Analytics</a>
+      </nav>
+      <div class="user-profile">
+        <div id="dropdown-trigger">
+          <img src="assets/icons/dropdown/dropdown.png" alt="" id="exit" />
+        </div>
+        <img src="assets/icons/user-profile/man.png" alt="" />
+      </div>
+    </div>
+    <main class="content">
+      <!DOCTYPE html>
+      <html lang="en">
+        <head>
+          <meta charset="UTF-8" />
+          <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+          />
+          <title>Analytics</title>
+          <link rel="stylesheet" href="../css/graph.css" />
+        </head>
+        <body>
+          <div class="controller-margin">
+            <div class="graphControl">
+              <canvas id="myCanvas"></canvas>
+              <canvas id="mySCanvas"></canvas>
+            </div>
+            <!--Imports-->
+            <div class="cards">
+              <div class="card red">
+                <p class="tip">Total Amount Spend</p>
+                <p class="second-text" id="spend">0</p>
+              </div>
+              <div class="card blue">
+                <p class="tip">Toal Amount Saved</p>
+                <p class="second-text" id="savings">0</p>
+              </div>
+              <div class="card green">
+                <p class="tip">Total Remaining Balance</p>
+                <p class="second-text" id="balance">0</p>
+              </div>
+            </div>
+          </div>
+          <script src="../../../../../node_modules/chart.js/dist/chart.umd.js"></script>
+          <script src="../js/analytics.js"></script>
+        </body>
+      </html>
+    </main>
+    <script src="assets/js/route.js"></script>
+    <script src="../../../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../../../node_modules/datatables.net/js/dataTables.min.js"></script>
+    <script src="../../../node_modules/sweetalert2/dist/sweetalert2.all.min.js"></script>
+    <script src="../../../node_modules/chart.js/dist/chart.umd.js"></script>
+    <script src="assets/js/table.js"></script>
+    <script src="assets/js/home.js"></script>
+    <script src="assets/js/analytics.js"></script>
+  </body>
+</html>

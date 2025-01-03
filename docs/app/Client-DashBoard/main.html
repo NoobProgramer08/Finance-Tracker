@@ -5,25 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Client Dashboard</title>
     <link rel="stylesheet" href="assets/css/mainpage.css" />
-    <link
-      rel="stylesheet"
-      href="../../../node_modules/datatables.net-dt/css/dataTables.dataTables.min.css"
-    />
+
+    <link rel="stylesheet" href="assets/css/tableStyle.css" />
+    <link rel="stylesheet" href="assets/css/graph.css" />
   </head>
   <body>
     <div class="links-product">
-      <header><h2>Trellio.</h2></header>
+      <header class="mainHeader"><h2>Trellio.</h2></header>
       <nav class="links">
         <a href="/home" onclick="route(event)">Home</a>
-        <a href="/transaction" onclick="route(event)">Transaction</a>
         <a href="/history" onclick="route(event)">History</a>
+        <a href="/analytics" onclick="route(event)">Summary</a>
       </nav>
       <div class="user-profile">
         <div id="dropdown-trigger">
-          <img src="assets/icons/dropdown/dropdown.png" alt="" />
-          <div id="dropdowns" class="menu"></div>
+          <img src="assets/icons/dropdown/dropdown.png" alt="" id="exit" />
         </div>
-        <img src="assets/icons/user-profile/man.png" alt="" />
+        <img src="assets/icons/user-profile/man.png" alt="" id="userGender" />
       </div>
     </div>
     <main class="content">
@@ -38,50 +36,97 @@
           <title>Home</title>
         </head>
         <body>
+          <!-- Existing content preserved -->
           <div class="wrap-status">
             <header class="heading">
               <h2>Hi</h2>
               <h2 id="firstname"></h2>
-              <h2 id="message">Welcome to Trello.</h2>
+              <h2 id="message">Welcome to Trellio.</h2>
             </header>
             <main class="user-status">
               <div class="card">
-                <img src="assets/icons/user-status/savings.png" alt="" />
-
+                <img src="assets\icons\user-status\savings.png" alt="" />
                 <div class="texts-status">
                   <span>Current Overall Budget</span>
-                  <p>0</p>
+                  <p id="budget">0</p>
                 </div>
               </div>
               <div class="card">
-                <img src="assets/icons/user-status/entry.png" alt="" />
+                <img src="assets\icons\user-status\entry.png" alt="" />
                 <div class="texts-status">
-                  <span>Todays Budget Entry</span>
-                  <p>0</p>
+                  <span>Latest Budget Entry</span>
+                  <p id="budgetEntry">0</p>
                 </div>
               </div>
               <div class="card">
-                <img src="assets/icons/user-status/expenses.png" alt="" />
-
+                <img src="assets\icons\user-status\expenses.png" alt="" />
                 <div class="texts-status">
-                  <span>Todays Expenses</span>
-                  <p>0</p>
+                  <span>Latest Expenses</span>
+                  <p id="expenses">0</p>
                 </div>
               </div>
             </main>
             <section class="finance-buttons">
-              <button>Add Income</button>
-              <button>Add Expense</button>
+              <button id="addInc">Add Income</button>
+              <button id="addExp">Add Expense</button>
             </section>
+          </div>
+
+          <!-- Income Modal -->
+          <div id="incomeModal" class="modal">
+            <div class="modal-content">
+              <button class="close-btn">&times;</button>
+              <div class="modal-header">
+                <h2>Add Income</h2>
+              </div>
+              <div class="input-group">
+                <label for="incomeAmount">Amount (₱)</label>
+                <input
+                  type="number"
+                  id="incomeAmount"
+                  placeholder="Enter amount"
+                  min="0"
+                  step="0.01"
+                />
+              </div>
+              <button class="submit-btn" onclick="handleIncome()">
+                Add Income
+              </button>
+            </div>
+          </div>
+
+          <!-- Expense Modal -->
+          <div id="expenseModal" class="modal">
+            <div class="modal-content">
+              <button class="close-btn">&times;</button>
+              <div class="modal-header">
+                <h2>Add Expense</h2>
+              </div>
+              <div class="input-group">
+                <label for="expenseAmount">Amount (₱)</label>
+                <input
+                  type="number"
+                  id="expenseAmount"
+                  placeholder="Enter amount"
+                  min="0"
+                  step="0.01"
+                />
+              </div>
+              <button class="submit-btn" onclick="handleExpense()" i>
+                Add Expense
+              </button>
+            </div>
           </div>
         </body>
       </html>
     </main>
-    <script src="assets/js/mainpage.js"></script>
     <script src="assets/js/route.js"></script>
-    <script src="../../../node_modules/chart.js/dist/chart.js"></script>
     <script src="../../../node_modules/jquery/dist/jquery.min.js"></script>
     <script src="../../../node_modules/datatables.net/js/dataTables.min.js"></script>
-    <script src="assets/js/history.js" type="module"></script>
+    <script src="../../../node_modules/sweetalert2/dist/sweetalert2.all.min.js"></script>
+    <script src="../../../node_modules/chart.js/dist/chart.umd.js"></script>
+    <script src="assets/js/table.js"></script>
+    <script src="assets/js/home.js"></script>
+    <script src="assets/js/analytics.js"></script>
   </body>
 </html>

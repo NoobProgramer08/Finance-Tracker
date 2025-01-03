@@ -12,7 +12,7 @@ const route = (event) => {
 const routes = {
     "/metric": "Finance-Tracker/docs/app/Admin-Dashboard/assets/pages/metrics.html",
     "/users": "Finance-Tracker/docs/app/Admin-Dashboard/assets/pages/users.html",
-    404: ""
+    
 };
 
 const handleLocation = async () => {

@@ -3,22 +3,33 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>History</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Transaction History</title>
+    <!-- DataTables CSS -->
+
+    <link rel="stylesheet" href="../css/tableStyle.css" />
   </head>
   <body>
-    <div class="table-header">
-      <header><h2>Transaction History</h2></header>
-      <table class="display" id="table">
+    <div class="tableHead">
+      <header>
+        <h2>Transaction History</h2>
+      </header>
+      <table class="myTable" id="table">
         <thead>
-          <th>Date</th>
-          <th>Description</th>
-          <th>Category</th>
-          <th>Amount</th>
-          <th>Type</th>
-          <th>Commands</th>
+          <tr>
+            <th>Date</th>
+            <th>Amount</th>
+            <th>Type</th>
+          </tr>
         </thead>
-        <tbody class="datas"></tbody>
+        <tbody class="datas">
+          <!-- Add more rows as needed -->
+        </tbody>
       </table>
     </div>
+
+    <!-- jQuery -->
+    <!-- Custom Script -->
+    <script type="module" src="../js/table.js"></script>
   </body>
 </html>

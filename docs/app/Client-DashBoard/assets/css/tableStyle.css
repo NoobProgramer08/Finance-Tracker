@@ -1,0 +1,66 @@
+/* General reset for margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Table container styles */
+.tableHead {
+  width: 100%;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+}
+
+/* Header styling */
+header h2 {
+  text-align: center;
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Table styling */
+.myTable {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed; /* Ensures all columns are equally sized */
+  border: 1px solid #ddd;
+}
+
+/* Header cell styling */
+.myTable th {
+  padding: 12px;
+  background-color: #f4f4f4;
+  text-align: left;
+  font-weight: bold;
+  border: 1px solid #ddd;
+  color: #333;
+}
+
+/* Data cell styling */
+.myTable td {
+  padding: 12px;
+  text-align: left;
+  border: 1px solid #ddd;
+  color: #555;
+}
+
+/* Row hover effect */
+.myTable tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Optional: Make the table responsive on small screens */
+@media (max-width: 600px) {
+  .myTable th,
+  .myTable td {
+    padding: 8px;
+  }
+
+  header h2 {
+    font-size: 20px;
+  }
+}

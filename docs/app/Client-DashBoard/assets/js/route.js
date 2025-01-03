@@ -1,4 +1,4 @@
-// router.js
+
 const insert = document.querySelector(".content");
 
 const route = (event) => {
@@ -10,29 +10,60 @@ const route = (event) => {
 };
 
 const routes = {
-    "/home": "Finance-Tracker/docs/app/Client-DashBoard/assets/pages/home.html",
-    "/transaction": "Finance-Tracker/docs/app/Client-DashBoard/assets/pages/transaction.html",
-    "/history":"Finance-Tracker/docs/app/Client-DashBoard/assets/pages/history.html",
+    "/home": "/Finance-Tracker/docs/app/Client-DashBoard/assets/pages/home.html",
+    "/analytics":"/Finance-Tracker/docs/app/Client-DashBoard/assets/pages/analytics.html",
+    "/history": "/Finance-Tracker/docs/app/Client-DashBoard/assets/pages/history.html",
 };
 
 const handleLocation = async () => {
     try {
         const path = window.location.pathname;
-        const route = routes[path] || routes[404];
-        const content = await fetch(route).then((data) => data.text());
-        insert.innerHTML = content;
-
-        // Initialize transaction table if we're on the transaction page
-        if (path === '/transaction' && typeof window.initializeDataTable === 'function') {
-            window.initializeDataTable();
-            console.log("Path");
+        const route = routes[path];
+        
+        if (!route) {
+            console.error('Route not found:', path);
+            return;
         }
+
+        const response = await fetch(route);
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        
+        const html = await response.text();
+        
+        // Create a temporary container
+        const temp = document.createElement('div');
+        temp.innerHTML = html;
+        
+        // Extract the content from the body
+        const bodyContent = temp.querySelector('body')?.innerHTML || html;
+        insert.innerHTML = bodyContent;
+
+        // Re-initialize page-specific functionality
+    
+        if (path === '/home' && typeof window.loadMetrics === 'function') {
+        
+            window.findUser();
+            window.loadModals();
+            window.loadMetrics();
+        }
+        if(path === '/history'){
+            window.readTable();
+        }
+        if(path === "/analytics"){
+            window.loadTable();
+        }
+        
+        
     } catch (error) {
         console.error('Error handling location:', error);
     }
+    window.loadMetrics();
 };
 
-window.onpopstate = route;
+window.onpopstate = handleLocation;
 window.route = route;
 
 // Initial route handling
+handleLocation();

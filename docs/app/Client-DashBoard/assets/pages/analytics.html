@@ -4,8 +4,31 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Analytics</title>
+    <link rel="stylesheet" href="../css/graph.css" />
   </head>
   <body>
-    
+    <div class="controller-margin">
+      <div class="graphControl">
+        <canvas id="myCanvas"></canvas>
+        <canvas id="mySCanvas"></canvas>
+      </div>
+      <!--Imports-->
+      <div class="cards">
+        <div class="card red">
+          <p class="tip">Total Amount Spend</p>
+          <p class="second-text" id="spend">0</p>
+        </div>
+        <div class="card blue">
+          <p class="tip">Total Amount Saved</p>
+          <p class="second-text" id="savings">0</p>
+        </div>
+        <div class="card green">
+          <p class="tip">Total Remaining Balance</p>
+          <p class="second-text" id="balance">0</p>
+        </div>
+      </div>
+    </div>
+    <script src="../../../../../node_modules/chart.js/dist/chart.umd.js"></script>
+    <script src="../js/analytics.js"></script>
   </body>
 </html>

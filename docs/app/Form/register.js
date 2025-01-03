@@ -78,7 +78,7 @@ newUser = {
         email:email.value,
         password:password.value,
         gender:userGender.value,
-        status:"Inactive"
+        status:"Active"
     };
 
     
