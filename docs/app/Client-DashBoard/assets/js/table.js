@@ -2,6 +2,9 @@
 
 function readTable(){
 
+    const date = new Date();
+    console.log(date);
+
 const table = document.querySelector(".datas");
 const expenses = localStorage.getItem("History");
 const convertExpenses = JSON.parse(expenses);

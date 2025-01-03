@@ -33,33 +33,34 @@
             name="viewport"
             content="width=device-width, initial-scale=1.0"
           />
-          <title>Analytics</title>
-          <link rel="stylesheet" href="../css/graph.css" />
+          <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+          <title>Transaction History</title>
+          <!-- DataTables CSS -->
+
+          <link rel="stylesheet" href="../css/tableStyle.css" />
         </head>
         <body>
-          <div class="controller-margin">
-            <div class="graphControl">
-              <canvas id="myCanvas"></canvas>
-              <canvas id="mySCanvas"></canvas>
-            </div>
-            <!--Imports-->
-            <div class="cards">
-              <div class="card red">
-                <p class="tip">Total Amount Spend</p>
-                <p class="second-text" id="spend">0</p>
-              </div>
-              <div class="card blue">
-                <p class="tip">Toal Amount Saved</p>
-                <p class="second-text" id="savings">0</p>
-              </div>
-              <div class="card green">
-                <p class="tip">Total Remaining Balance</p>
-                <p class="second-text" id="balance">0</p>
-              </div>
-            </div>
+          <div class="tableHead">
+            <header>
+              <h2>Transaction History</h2>
+            </header>
+            <table class="myTable" id="table">
+              <thead>
+                <tr>
+                  <th>Date</th>
+                  <th>Amount</th>
+                  <th>Type</th>
+                </tr>
+              </thead>
+              <tbody class="datas">
+                <!-- Add more rows as needed -->
+              </tbody>
+            </table>
           </div>
-          <script src="../../../../../node_modules/chart.js/dist/chart.umd.js"></script>
-          <script src="../js/analytics.js"></script>
+
+          <!-- jQuery -->
+          <!-- Custom Script -->
+          <script type="module" src="../js/table.js"></script>
         </body>
       </html>
     </main>

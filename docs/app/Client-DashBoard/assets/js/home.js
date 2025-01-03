@@ -268,6 +268,11 @@ parseBudget.forEach((item) => {
 
 
 function handleExpense() {
+
+
+
+
+    console.log("Handle Expense");
    
   
     const expenses = document.querySelector("#expenses");
@@ -331,7 +336,7 @@ function handleExpense() {
 
 
     updated.push(update);
-
+   
     let toPush = [];
     let pushes = {
         username:userEmail,
@@ -364,17 +369,40 @@ function handleExpense() {
 
 parseBalance.forEach((item) => {
 
-    if(!item.username == userEmail && !item.password == userPass){
+    if(item.username != userEmail && item.password != userPass){
         updated.push(item);
 
     }
+
+   
         
 }); 
+console.table(updated);
 
 localStorage.setItem("UserIncome",JSON.stringify(updated));
-        
-        
 
+const lBudgetEntry = {
+    username:userEmail,
+    pass:userPass,
+    amount:expenseAmount.value
+ }
+
+ let LatestExpenseEntry = [];
+
+ 
+LatestExpenseEntry.push(lBudgetEntry);
+
+localStorage.setItem("LatestExpenses",JSON.stringify(LatestExpenseEntry));
+const getBudget = localStorage.getItem("LatestExpenses");
+const parseBudget = JSON.parse(getBudget);
+let amount = 0;
+
+parseBudget.forEach((item) => {
+    amount = item.amount;
+
+});
+
+        
 
     expenseAmount.value = "";
     modal.style.display = "none";
@@ -449,7 +477,13 @@ const parseBudget = JSON.parse(getBudget);
 let amount = 0;
 
 parseBudget.forEach((item) => {
-    amount = item.amount;
+
+    if(item.username == userEmail && item.pass == userPass){
+        amount = item.amount;
+        
+
+    }
+    
 
 });
 
@@ -462,7 +496,11 @@ parseBudget.forEach((item) => {
     let amounts = 0;
         
     parse.forEach((item) => {
-        amounts = item.amount; 
+        if(item.username == userEmail && item.pass == userPass){
+            amounts = item.amount; 
+
+        }
+       
         });
 
         console.log(amount);
