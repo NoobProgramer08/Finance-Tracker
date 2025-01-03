@@ -225,17 +225,41 @@ function handleIncome() {
 
 
    }
-   console.log(pushIng);
+
+   const lBudgetEntry = {
+    username:userEmail,
+    pass:userPass,
+    amount:incomeAmount.value
+ }
+
+ let latestBudgetEntry = [];
+
+ 
+latestBudgetEntry.push(lBudgetEntry);
+
+localStorage.setItem("LatestBudget",JSON.stringify(latestBudgetEntry));
+const getBudget = localStorage.getItem("LatestBudget");
+const parseBudget = JSON.parse(getBudget);
+let amount = 0;
+
+parseBudget.forEach((item) => {
+    amount = item.amount;
+
+});
+
+ budgetEntry.innerHTML = amount;
+
+   
+   
 
  
  
     localStorage.setItem("History",JSON.stringify(pushIng))
 
     previousTransactions.push(userBalances);
-    budgetEntry.innerHTML = "$"+incomeAmount.value;
-
-    
+  
    localStorage.setItem("UserIncome",JSON.stringify(previousTransactions));
+
    incomeAmount.value = "";
    modal.style.display = "none";
    loadMetrics();
@@ -281,6 +305,8 @@ function handleExpense() {
 
     const getBalances = localStorage.getItem("UserIncome");
     const parseBalance = JSON.parse(getBalances);
+
+    
     
     parseBalance.forEach((item) => {
         let amount = Number(item.balance);
@@ -292,15 +318,19 @@ function handleExpense() {
     });
     
     const withDeduction = totalBudget - Number(expenseAmount.value);
-    expenses.innerHTML = "$"+expenseAmount.value;
+    
+    
 
-    let updateBalance = {
+
+    let updated = [];
+    let update = {
         username:userEmail,
         pass:userPass,
         balance:withDeduction
+    }
 
-    };
-    let updated = [];
+
+    updated.push(update);
 
     let toPush = [];
     let pushes = {
@@ -326,9 +356,9 @@ function handleExpense() {
 
 
     }
-        console.table(toPush);
+      
         localStorage.setItem("History",JSON.stringify(toPush));
-    
+        
 
         
 
@@ -339,13 +369,12 @@ parseBalance.forEach((item) => {
 
     }
         
-});
- 
- console.log("Updated");
- console.log(updated);
+}); 
 
+localStorage.setItem("UserIncome",JSON.stringify(updated));
+        
+        
 
-   // localStorage.setItem("UserIncome",JSON.stringify(updated));
 
     expenseAmount.value = "";
     modal.style.display = "none";
@@ -403,7 +432,7 @@ try{
                 totalBudget += amount;
                 userCount++;
 
-           
+
             }
             
         });
@@ -412,7 +441,36 @@ try{
     budget.innerHTML = "$"+totalBudget;
    
     }
+
+//Amount of budget
+
+const getBudget = localStorage.getItem("LatestBudget");
+const parseBudget = JSON.parse(getBudget);
+let amount = 0;
+
+parseBudget.forEach((item) => {
+    amount = item.amount;
+
+});
+
+        budgetEntry.innerHTML = "$"+amount;
+
+ //Amount of expense
+
+    const user = localStorage.getItem("LatestExpenses");
+    const parse = JSON.parse(user);
+    let amounts = 0;
+        
+    parse.forEach((item) => {
+        amounts = item.amount; 
+        });
+
+        console.log(amount);
+        console.log(amounts);
     
+        expenses.innerHTML = "$"+amounts;
+
+
    
 }catch(error){
     console.log(error);
